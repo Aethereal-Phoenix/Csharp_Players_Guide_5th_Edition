@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvl3-C4-Consolas_and_Telim", "Lvl3-C4-Consolas_and_Telim.csproj", "{C795821A-660C-4F4C-B4BC-1C830A9F9582}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C795821A-660C-4F4C-B4BC-1C830A9F9582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C795821A-660C-4F4C-B4BC-1C830A9F9582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C795821A-660C-4F4C-B4BC-1C830A9F9582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C795821A-660C-4F4C-B4BC-1C830A9F9582}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C693831C-E0E6-4780-8E96-FBB304B17233}
+	EndGlobalSection
+EndGlobal
