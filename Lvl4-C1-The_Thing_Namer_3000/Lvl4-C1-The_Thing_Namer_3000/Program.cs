@@ -10,13 +10,15 @@ namespace Lvl4_C1_The_Thing_Namer_3000
             while (theThingNamer3000)
             {
                 bool mainMenu = true;
+                // Start of mainMenu
                 while (mainMenu)
                 {
+                    char response = '\0';
                     Console.Clear();
                     Console.WriteLine("The Thing Namer 3000");
                     Console.WriteLine();
                     Console.WriteLine("Is there something you need to have named today? Y/N");
-                    char response = ' ';
+                    
                     try
                     {
                         response = char.Parse(Console.ReadLine().ToUpper());
@@ -54,8 +56,37 @@ namespace Lvl4_C1_The_Thing_Namer_3000
                             return;
                         }
                     }
+                    else if (response == '\0')
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Please enter a response");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Please enter a valid response.");
+                        Console.ReadLine();
+                    }
 
                 }// End of mainMenu
+
+                
+                bool nameThing = true;
+                // start of nameThing
+                while (nameThing)
+                {
+                    Console.Clear();
+                    Console.WriteLine("What kind of thing are we naming?");
+                    string thing = Console.ReadLine();
+                    Console.WriteLine($"How would you describe the {thing}? Big? Purple? Broken?");
+                    string description = Console.ReadLine();
+                    string ofDoom = "of Doom";
+                    string threeThousand = "3000";
+                    Console.WriteLine($"The {description} {thing} {ofDoom} {threeThousand}!");
+                    Console.ReadLine();
+                    nameThing = false;
+                }//end of nameThing
 
             }// End of theThingNamer3000 
              //End of Main
