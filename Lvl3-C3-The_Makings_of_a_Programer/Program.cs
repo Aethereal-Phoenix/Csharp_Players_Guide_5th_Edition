@@ -8,7 +8,11 @@
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Hello, World!");
+                Console.WriteLine("I enjoy writing code in C#");
+                Console.WriteLine("This book is a lot of fun");
+                Console.WriteLine("I can not wait to see what new content I will learn");
+                Console.WriteLine("I already know a bit from my schooling");
+                Console.WriteLine("However I enjoy coding and find it fun");
                 Console.ReadLine();
                 bool exit = true;
 
