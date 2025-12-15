@@ -14,7 +14,6 @@
 
                 while (exit)
                 {
-                    Console.WriteLine("Adding an extra line to show commit");
                     char exitYN;
                     Console.WriteLine("Would you like to see it again? Y/N");
                     try
@@ -49,7 +48,6 @@
                     break;
                 }
             }// End of main program
-
         }
     }
 }
