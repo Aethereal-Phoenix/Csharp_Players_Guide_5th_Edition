@@ -7,6 +7,7 @@ namespace Lvl4_C1_The_Thing_Namer_3000
         static void Main(string[] args)
         {
             bool theThingNamer3000 = true;
+            // Start of theThingNamer3000
             while (theThingNamer3000)
             {
                 bool mainMenu = true;
