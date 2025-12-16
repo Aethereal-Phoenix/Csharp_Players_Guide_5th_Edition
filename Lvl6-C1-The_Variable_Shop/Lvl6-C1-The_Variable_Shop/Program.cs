@@ -54,6 +54,7 @@ namespace Lvl6_C1_The_Variable_Shop
                     break;
                 }
 
+                // Start of showInventory
                 while (showInventory)
                 {
                     string stringVar = "String";
@@ -88,7 +89,7 @@ namespace Lvl6_C1_The_Variable_Shop
                     Console.WriteLine($"Decimal (Bytes: 16 Digits of Precision: 28-29 Hardware Supported: No): {decimalVar}");
                     Console.ReadLine();
                     break;
-                }
+                }// End of showInventory
             }// end of main program flow
         }
     }
