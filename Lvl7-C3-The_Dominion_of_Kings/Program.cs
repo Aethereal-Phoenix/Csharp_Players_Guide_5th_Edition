@@ -21,7 +21,8 @@ namespace Lvl7_C3_The_Dominion_of_Kings
                 uint estates = NumberCollect("Estates", $"How many Estates do you have {userName}");
 
                 uint totalPoints = PointCalculator(provinces, duchies, estates);
-
+                
+                Console.Clear();
                 Console.WriteLine($"{userName}, your total points: {totalPoints}");
                 Console.ReadLine();
 
@@ -41,7 +42,7 @@ namespace Lvl7_C3_The_Dominion_of_Kings
                     Console.ReadLine();
                     break;
                 }
-            }
+            }// End of while loop
         }// End of MAIN
         // Methods go below this line
         //------------------------------------------------------------------------//
