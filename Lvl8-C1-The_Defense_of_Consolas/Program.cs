@@ -16,9 +16,17 @@ namespace Lvl8_C1_The_Defense_of_Consolas
 
                 if (response == true)
                 {
-                    
+                    xTarget = CoordinateCollect('X');
+                    yTarget = CoordinateCollect('Y');
                 }
-
+                else
+                {
+                    DrawHeader();
+                    Console.WriteLine("Have a good day...");
+                    Console.ReadKey(true);
+                    Console.Beep(400, 250);
+                    break;
+                }
             }
         }// End of Main Method
          // Methods go below this line
@@ -34,21 +42,21 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                 try
                 {
                     response = char.Parse(Console.ReadLine().ToUpper());
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
                 catch (FormatException ex)
                 {
                     DrawHeader();
                     Console.WriteLine(ex.Message);
                     Console.ReadKey(true);
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
                 catch (Exception ex)
                 {
                     DrawHeader();
                     Console.WriteLine(ex.Message);
                     Console.ReadKey(true);
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
 
                 if (response == positive)
@@ -64,7 +72,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                     DrawHeader();
                     Console.WriteLine($"You entered {response} please enter a valid response. {positive} or {negative}");
                     Console.ReadKey(true);
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
             }
         }// End of Confirmation method
@@ -94,7 +102,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                     Console.WriteLine(ex.Message);
                     Console.WriteLine("Please enter a valid numerical response.");
                     Console.ReadKey(true);
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
                 catch (Exception ex)
                 {
@@ -102,10 +110,10 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                     Console.WriteLine(ex.Message);
                     Console.WriteLine("Please enter a valid response.");
                     Console.ReadKey(true);
-                    Console.Beep();
+                    Console.Beep(400, 250);
                 }
 
-                if (input > 0 && input >= 10)
+                if (input > 0 && input <= 10)
                 {
                     bool response = Confirmation($"You have entered {input} for the {xy} coordinate is this correct?", 'Y', 'N');
 
@@ -118,11 +126,11 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                         DrawHeader();
                         Console.WriteLine("Very Well. We shall try again.");
                         Console.ReadKey(true);
-                        Console.Beep();
+                        Console.Beep(400, 250);
                     }
                 }
-            }
-        }
+            }// End 0f while loop
+        }// End of CoordinateCollect method
     // Methods go above this line
     }// End of Program class
 }
