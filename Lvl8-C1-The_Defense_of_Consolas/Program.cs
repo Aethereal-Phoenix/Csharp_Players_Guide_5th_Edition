@@ -131,6 +131,43 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                 }
             }// End 0f while loop
         }// End of CoordinateCollect method
+
+        public static void CoordinateCombination(uint x, uint y)
+        {
+            uint xNorth = x;
+            uint xEast = x + 1;
+            uint xSouth = x;
+            uint xWest = x - 1;
+
+            uint yNorth = y + 1;
+            uint yEast = y;
+            uint ySouth = y - 1;
+            uint yWest = y;
+
+            if (xNorth > 10 || yNorth > 10)
+            {
+                DrawHeader();
+                Console.WriteLine($"Northern Deployment: Unable to deploy to this location because the input location is outside of the city borders");
+            }
+            else if (xNorth <= 10 && yNorth <= 10)
+            {
+                DrawHeader();
+                Console.WriteLine($"Northern Deployment: {xNorth}, {yNorth}");
+            }
+
+            if (xEast > 10 || yEast > 10 )
+            {
+                DrawHeader();
+                Console.WriteLine($"Eastern Deployment: Unable to deploy to this location because the input location is outside of the city borders");
+            }
+            else if (xEast <= 10 && yEast <= 10 && yEast > 0)
+            {
+                DrawHeader();
+                Console.WriteLine($"Eastern Deployment: {xEast}, {yEast}");
+            }
+
+            if (xSouth < 0 || ySouth ) 
+        }
     // Methods go above this line
     }// End of Program class
 }
