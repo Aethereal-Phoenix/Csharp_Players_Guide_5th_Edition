@@ -147,9 +147,9 @@ namespace Lvl8_C1_The_Defense_of_Consolas
             if (xNorth > 10 || yNorth > 10)
             {
                 DrawHeader();
-                Console.WriteLine($"Northern Deployment: Unable to deploy to this location because the input location is outside of the city borders");
+                Console.WriteLine($"Northern Deployment: Undeployeable (Outside city border)");
             }
-            else if (xNorth <= 10 && yNorth <= 10)
+            else if (xNorth <= 10 && yNorth <= 10 && xNorth >= 0 && yNorth >= 0)
             {
                 DrawHeader();
                 Console.WriteLine($"Northern Deployment: {xNorth}, {yNorth}");
@@ -158,7 +158,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
             if (xEast > 10 || yEast > 10 )
             {
                 DrawHeader();
-                Console.WriteLine($"Eastern Deployment: Unable to deploy to this location because the input location is outside of the city borders");
+                Console.WriteLine($"Eastern Deployment: Undeployeable (Outside city border)");
             }
             else if (xEast <= 10 && yEast <= 10 && yEast > 0)
             {
