@@ -9,7 +9,8 @@ namespace Lvl8_C1_The_Defense_of_Consolas
     {
         static void Main(string[] args)
         {
-            while (true)
+            bool startMenu = true;
+            while (startMenu)
             {
                 bool troopDeployment = false;
                 bool mainMenu = true;
@@ -32,7 +33,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                         Console.ReadKey(true);
                         Console.Beep(500, 200);
                         troopDeployment = true;
-                        continue;
+                        
                     }
                     else if (confirmName == false)
                     {
@@ -47,8 +48,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                     {
                         xAxis = CollectCoordinates('X');
                         yAxis = CollectCoordinates('Y');
-
-
+                        TroopDeploymentLocations(xAxis, yAxis);
                     }
                 }
             }
@@ -103,6 +103,16 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                 {
                     DrawHeader();
                     bool confirmInput = Confirmation($"You have entered {xyCoordinate} for the {xy} axis.\nIs this correct?", 'Y', 'N');
+                    if (confirmInput == true)
+                    {
+                        return xyCoordinate;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Very well, we shall try again.");
+                        Console.ReadKey(true);
+                        continue;
+                    }
                 }
             }
         }// End of CollectCoordiante method
@@ -172,21 +182,47 @@ namespace Lvl8_C1_The_Defense_of_Consolas
             DrawHeader();
             Console.WriteLine("Troop Deployments:");
             // Northern Troop Deployment
-            Console.WriteLine("Northern Deployment: ");
-            if ((xAxisNorth > 10 || xAxisNorth < 0) && (yAxisNorth > 10 || yAxisNorth < 0))
+            Console.Write("Northern Deployment: ");
+            if ((xAxisNorth > 10 || xAxisNorth < 0) || (yAxisNorth > 10 || yAxisNorth < 0))
             {
-                Console.Write("unable to deploy troops outside city limits");
+                Console.WriteLine("Unable to deploy troops outside city limits");
             }
             else if (xAxisNorth <= 10 && xAxisNorth >= 0 && yAxisNorth >= 0 && yAxisNorth <= 10)
             {
-                Console.Write($"({xAxisNorth}, {yAxisNorth})");
+                Console.WriteLine($"({xAxisNorth}, {yAxisNorth})");
             }
 
             // Eastern Troop Deployment
-
+            Console.Write("Eastern Deployment: ");
+            if ((xAxisEast > 10 || xAxisEast < 0) || (yAxisEast > 10 || yAxisEast < 0))
+            {
+                Console.WriteLine("Unable to deploy troops outside city limits");
+            }
+            else if (xAxisEast <= 10 && xAxisEast >= 0 && yAxisEast <= 10 && yAxisEast >= 0)
+            {
+                Console.WriteLine($"({xAxisEast}, {yAxisEast})");
+            }
             // Southern Troop Deployment
-
+            Console.Write("Southern Deployment: ");
+            if ((xAxisSouth > 10 || xAxisSouth < 0) || (yAxisSouth > 10 || yAxisSouth < 0))
+            {
+                Console.WriteLine("Unable to deploy troops outside city limits");
+            }
+            else if (xAxisSouth <= 10 && xAxisSouth >= 0 && yAxisSouth <= 10 && yAxisSouth >= 0)
+            {
+                Console.WriteLine($"({xAxisSouth}, {yAxisSouth})");
+            }
             // Western Troop Deployment
+            Console.Write("Western Deployment: ");
+            if ((xAxisWest > 10 || xAxisWest < 0) || (yAxisWest > 10 || yAxisWest < 0))
+            {
+                Console.WriteLine("Unable to deploy troops outside city limits");
+            }
+            else if (xAxisWest <= 10 && xAxisWest >= 0 && yAxisWest <= 10 && yAxisWest >= 0)
+            {
+                Console.WriteLine($"({xAxisWest}, {yAxisWest})");
+            }
+            Console.ReadLine();
         }
     // Methods go above this line
     }// End of Program class
