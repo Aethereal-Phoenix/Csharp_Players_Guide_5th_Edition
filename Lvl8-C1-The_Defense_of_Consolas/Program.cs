@@ -33,7 +33,6 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                         Console.ReadKey(true);
                         Console.Beep(500, 200);
                         troopDeployment = true;
-                        
                     }
                     else if (confirmName == false)
                     {
@@ -49,6 +48,7 @@ namespace Lvl8_C1_The_Defense_of_Consolas
                         xAxis = CollectCoordinates('X');
                         yAxis = CollectCoordinates('Y');
                         TroopDeploymentLocations(xAxis, yAxis);
+                        break;
                     }
                 }
             }
