@@ -5,7 +5,7 @@
         public static string headerTitle = "Watchtower";
         static void Main(string[] args)
         {
-           while (true)
+            while (true)
             {
                 MethodCodex.Header();
                 int xCoord = CollectCoordinate('X');
@@ -21,12 +21,14 @@
                 }
 
                 MethodCodex.Header();
-                Console.WriteLine($"The target is at ({xCoord}, {yCoord}).");
+                Console.WriteLine(EnemyDirection(xCoord, yCoord));
                 Console.ReadKey(true);
                 break;
             }
         }// End of Main method
         // Methods go below this line
+
+       
 
         public static int CollectCoordinate(char coord)
         {
@@ -34,7 +36,7 @@
             {
                 MethodCodex.Header();
                 Console.WriteLine($"Please enter the {coord} coordinate of the enemy.");
-                
+
                 if (!int.TryParse(Console.ReadLine(), out var inputCoord))
                 {
                     MethodCodex.Header();
@@ -52,10 +54,54 @@
                 {
                     MethodCodex.Header();
                     Console.WriteLine("zxzx");
-                } 
+                }
             }
         }
-       
+
+        public static string EnemyDirection(int x, int y)
+        {
+            string enemyDirection = "";
+
+            // North or South
+            if (y < 0)
+            {
+                enemyDirection += "South";
+            }
+            else if (y == 0)
+            {
+                enemyDirection += "";
+            }
+            else if (y > 0)
+            {
+                enemyDirection += "North";
+            }
+
+            if ((y > 0 || y < 0) && (x < 0 || x > 0))
+            {
+                enemyDirection += "-";
+            }
+
+            if (x < 0)
+            {
+                enemyDirection += "West";
+            }
+            else if (x == 0)
+            {
+                enemyDirection += "";
+            }
+            else if (x > 0)
+            {
+                enemyDirection += "East";
+            }
+
+            if (x == 0 && y == 0)
+            {
+                return enemyDirection = "The enemy is here.";
+            }
+
+            return $"The enemy is to the {enemyDirection}";
+        }
+
         // Methods go above this line
     }// End of Program class
 }
