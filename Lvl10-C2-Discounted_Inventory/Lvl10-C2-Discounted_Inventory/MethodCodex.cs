@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace Lvl10_C1_Buying_Inventory
+namespace Lvl10_C2_Discounted_Inventory
+
 {
     internal class MethodCodex
     {
