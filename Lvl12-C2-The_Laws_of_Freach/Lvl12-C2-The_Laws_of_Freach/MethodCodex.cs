@@ -5,7 +5,6 @@ using System.Net.Http.Headers;
 using System.Text;
 
 namespace Lvl12_C2_The_Laws_of_Freach
-
 {
     internal class MethodCodex
     {
