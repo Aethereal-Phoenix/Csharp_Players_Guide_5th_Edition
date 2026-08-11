@@ -7,7 +7,7 @@
         {
             MethodCodex.Header();
 
-            Countdown(100);
+            Countdown(10);
         }
         static void Countdown(int num)
         {
