@@ -17,10 +17,17 @@ namespace Lvl11_C1_The_Prototype
                 if (SeeIfHit(pilot, canon))
                 {
                     MethodCodex.Header();
+                    Console.WriteLine("You hit the target!!");
+                    Console.ReadKey(true);
+                }
+                else
+                {
+                    Miss(pilot, canon);
                 }
             }
         }
 
+        #region Number collection
         public static int PlayerOne()
         {
             while (true)
@@ -64,10 +71,29 @@ namespace Lvl11_C1_The_Prototype
                 return input;
             }
         }// End of PlayerTwo method
+        #endregion
 
+        #region Hit Methods
         public static bool SeeIfHit(int playerOne, int playerTwo)
         {
             return (playerOne == playerTwo);
         }
+
+        public static void Miss(int playerOne, int playerTwo)
+        {
+            MethodCodex.Header();
+            Console.WriteLine("\n\n");
+            if (playerOne > playerTwo)
+            {
+                Console.WriteLine("You were to low.\nPlease try again.");
+                Console.ReadKey(true);
+            }
+            else if (playerOne < playerTwo)
+            {
+                Console.WriteLine("You were to high.\nPlease try again.");
+                Console.ReadKey(true);
+            }
+        }
+        #endregion
     }
 }
