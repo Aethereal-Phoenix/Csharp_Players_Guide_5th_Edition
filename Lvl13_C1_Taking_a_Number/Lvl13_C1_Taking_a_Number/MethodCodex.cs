@@ -71,7 +71,7 @@ namespace Lvl13_C1_Taking_a_Number
         }// End of Header method
 
 
-        //>>> [ArrowMenu method] This is commented out since I can not use this at school yet.Will uncomment for personal projects
+        //>>> [ArrowMenu method]
         public static int ArrowMenu(string[] options)
         {
             ConsoleKey key; // ConsoleKey is an enum that has all the console keyboard key values defined inside of it---by making ConsoleKey key we are creating a variable for the user input key to be stored
