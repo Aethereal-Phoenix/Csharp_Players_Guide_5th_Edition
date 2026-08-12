@@ -6,8 +6,10 @@ namespace Lvl18_C1_Vin_Fletcher_s_Arrows
 {
     internal enum Fletching
     {
+        None = default,
         Plastic,
         Turkey_Feathers,
         Goose_Feathers
     }
 }
+ 

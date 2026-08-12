@@ -83,7 +83,6 @@ namespace Lvl18_C1_Vin_Fletcher_s_Arrows
             do
             {
                 Header(); // Draws the header
-                Console.WriteLine($"Lock Status: {Program.lockStatus.ToString()}");
                 for (int i = 0; i < options.Length; i++) // This loop draws the menu
                 {
                     if (i == selectedIndex)
@@ -107,8 +106,17 @@ namespace Lvl18_C1_Vin_Fletcher_s_Arrows
                         if (selectedIndex < 0) // Checks to see if selectedIndex is now less than 0 if it is we go to the bottom of the array
                             selectedIndex = options.Length - 1; // Sets selectedIndex to be the last item in the menu
                         break;
-
+                    case ConsoleKey.W: // If the user presses the up arrow
+                        selectedIndex--; // By decrimenting selectedIndex we go up in the menu
+                        if (selectedIndex < 0) // Checks to see if selectedIndex is now less than 0 if it is we go to the bottom of the array
+                            selectedIndex = options.Length - 1; // Sets selectedIndex to be the last item in the menu
+                        break;
                     case ConsoleKey.DownArrow: //If the user presses the down arrow
+                        selectedIndex++; // By incrementing selectedindex we go down in the menu
+                        if (selectedIndex >= options.Length) // Chceks selectedIndex is greater than or equal to the length of the options array
+                            selectedIndex = 0; // Sets selectedIndex = 0 so we go to the top of the menu
+                        break;
+                    case ConsoleKey.S: //If the user presses the down arrow
                         selectedIndex++; // By incrementing selectedindex we go down in the menu
                         if (selectedIndex >= options.Length) // Chceks selectedIndex is greater than or equal to the length of the options array
                             selectedIndex = 0; // Sets selectedIndex = 0 so we go to the top of the menu

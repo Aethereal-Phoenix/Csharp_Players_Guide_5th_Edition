@@ -6,6 +6,7 @@ namespace Lvl18_C1_Vin_Fletcher_s_Arrows
 {
     internal enum Arrowhead
     {
+        None = default,
         Steel,
         Wood,
         Obsidian
