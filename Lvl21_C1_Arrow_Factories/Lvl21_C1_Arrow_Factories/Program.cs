@@ -1,12 +1,11 @@
 ﻿namespace Lvl21_C1_Arrow_Factories
 {
-    internal class Program
-    {
+    internal class Program    {
         public static string headerTitle = "Vin Fletcher's Arrows";
         static void Main(string[] args)
         {
             List<Arrow> arrows = new List<Arrow>();
-            string[] menu = { "Make an arrow", "View shopping cart", "Exit" };
+            string[] menu = { "Make an arrow","Specialty Arrows", "View shopping cart", "Exit" };
             while (true)
             {
                 MethodCodex.Header();
@@ -44,6 +43,49 @@
                 }// Make an Arrow 
                 else if (choice == 1)
                 {
+                    string[] arrowsMenu = { "Begginer Arrow", "Marksman Arrow", "Elite Arrow", "Back" };
+                    int ArrowChoice = MethodCodex.ArrowMenu(arrowsMenu);
+
+                    Arrow arrowSpecial = new Arrow();
+
+                    if (ArrowChoice == 0)
+                    {
+                        arrowSpecial = Arrow.CreateBegginerArrow();
+                    }
+                    else if (ArrowChoice == 1)
+                    {
+                        arrowSpecial = Arrow.CreateMarkmanArrow();
+                    }
+                    else if (choice == 2)
+                    {
+                        arrowSpecial = Arrow.CreateEliteArrow();
+                    }
+                    else if (choice == 3)
+                    {
+                        return;
+                    }
+
+                    Console.WriteLine("How many would you like to order?");
+                    if (int.TryParse(Console.ReadLine(), out int ammountSpecial))
+                    {
+
+                        if (MethodCodex.ConfirmInput($"You have entered {ammountSpecial}\nIs this correct?", 'Y', 'N'))
+                        {
+                            for (int i = 0; i < ammountSpecial; i++)
+                            {
+                                arrows.Add(arrowSpecial);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MethodCodex.Header();
+                        Console.WriteLine("You have entered an invalid input, please try again");
+                        Console.ReadKey(true);
+                    }
+                }
+                else if (choice == 2)
+                {
                     double totalCost = 0;
                     for (int i = 0; i < arrows.Count; i++)
                     {
@@ -52,12 +94,11 @@
                     Console.WriteLine($"Number of arrows: {arrows.Count}\nTotal Cost: {totalCost}");
                     Console.ReadKey(true);
                 }
-                else if (choice == 2)
+                else if (choice == 3)
                 {
                     Environment.Exit(0);
                 }
             }
         }
     }
-}
 }

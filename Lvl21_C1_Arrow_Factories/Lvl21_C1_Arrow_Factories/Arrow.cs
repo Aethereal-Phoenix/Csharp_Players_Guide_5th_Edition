@@ -136,7 +136,7 @@ namespace Lvl21_C1_Arrow_Factories
             return arrow;
         }
 
-        public static Arrow BegginerArrow()
+        public static Arrow CreateBegginerArrow()
         {
             Arrow arrow = new Arrow
             (
@@ -148,7 +148,7 @@ namespace Lvl21_C1_Arrow_Factories
             return arrow;
         }
 
-        public static Arrow MarkmanArrows()
+        public static Arrow CreateMarkmanArrow()
         {
             Arrow arrow = new Arrow
             (
